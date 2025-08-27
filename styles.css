@@ -1,0 +1,154 @@
+:root {
+  --primary: #5865F2; /* Синий как в Discord */
+  --secondary: #36393F; /* Темный серый */
+  --text: #FFFFFF;
+  --bg: #2F3136;
+  --light-bg: #FFFFFF;
+  --light-text: #000000;
+  --light-secondary: #F0F0F0;
+}
+
+body.dark-theme {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body.light-theme {
+  background: var(--light-bg);
+  color: var(--light-text);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: var(--secondary);
+  border-radius: 8px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.skr {
+  color: var(--primary);
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.baraholka {
+  color: var(--text);
+}
+
+.controls button, select {
+  background: var(--primary);
+  color: var(--text);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.controls button:hover {
+  transform: scale(1.05);
+}
+
+.sidebar {
+  width: 200px;
+  float: left;
+  background: var(--secondary);
+  height: calc(100vh - 60px);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar a {
+  color: var(--text);
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.sidebar a:hover {
+  background: var(--primary);
+}
+
+main {
+  margin-left: 220px;
+  padding: 20px;
+}
+
+.card {
+  background: var(--secondary);
+  border-radius: 12px;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+  width: 200px;
+  animation: fadeIn 0.5s;
+  transition: box-shadow 0.3s;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.card .price {
+  font-weight: bold;
+}
+
+.card .city {
+  color: green;
+  font-size: 12px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+form input, select, textarea {
+  display: block;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: var(--light-secondary);
+  color: var(--text);
+}
+
+form button {
+  background: var(--primary);
+  color: var(--text);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.filter {
+  margin: 10px;
+}
+
+.filter input, select {
+  border-radius: 8px;
+  padding: 8px;
+}

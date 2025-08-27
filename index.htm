@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>СКР БАРАХОЛКА</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script> <!-- Для Telegram Web App -->
+</head>
+<body class="dark-theme">
+  <header>
+    <div class="logo">
+      <span class="skr">СКР</span> <span class="baraholka">Барахолка</span>
+    </div>
+    <div class="controls">
+      <button id="theme-toggle">🌙</button>
+      <select id="language">
+        <option value="ru">Рус</option>
+        <option value="uk">Укр</option>
+      </select>
+      <button id="login-btn">Войти</button>
+      <button id="register-btn">Регистрация</button>
+      <button id="admin-btn">Админ</button>
+    </div>
+  </header>
+  <nav class="sidebar">
+    <ul>
+      <li><a href="#/home">Главная</a></li>
+      <li><a href="#/categories">Категории</a></li>
+      <li><a href="#/create-ad">Создать объявление</a></li>
+    </ul>
+  </nav>
+  <main id="content"></main>
+  <script src="app.js"></script>
+</body>
+</html>
